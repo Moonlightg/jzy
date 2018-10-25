@@ -1,0 +1,45 @@
+/*
+ * notice.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.22 Moonlight, Inc.
+ *
+*/
+
+.notice{
+	padding: .25rem .5rem;
+}
+.notice-img{
+	width: 4rem;
+    padding-right: .5rem;
+	img{
+		width: 100%;
+	}
+}
+.notice-text{
+	line-height: 1.2rem;
+	p{
+		color: #333;
+		span{
+			display: inline-block;
+			margin-left: @margin;
+			color: #999;
+		}
+	}
+}
+.notice-link{
+	a{
+		color: #999;
+	}
+}
+@media screen and (max-width:320px){
+	.notice-img{
+		width: 3.4rem;
+	}
+	.notice-text{
+		line-height: 1rem;
+		p{
+			font-size: .6rem;
+		}
+	}
+}

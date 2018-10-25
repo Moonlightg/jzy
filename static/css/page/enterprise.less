@@ -1,0 +1,154 @@
+/*
+ * enterprise.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.24 Moonlight, Inc.
+ *
+*/
+
+// 商家
+.enterprise-list {
+	li{
+		padding: .5rem 0;
+	    margin: 0 @margin;
+	    border-bottom: 1px solid #e7e7e7;
+	    background: #fff;
+		&>.tl-item-info{
+			overflow: hidden;
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+		&.more{
+			line-height: @header_height;
+			font-size: @fs7;
+			color: #999;
+			i{
+				margin-left: .2rem;
+			}
+		}
+	}
+	.tl-title{
+		margin-bottom: .5rem;
+		&>.tl-item-info{
+			overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		}
+	}
+	.distance{
+		font-size: @fs6;
+		color: @brand_primary;
+		i{
+			margin-right: .2rem;
+		}
+	}
+}
+.enterprise-discount{
+	p{
+		font-size: @fs6;
+	}
+}
+.enterprise-img{
+	position: relative;
+	width: 4.5rem;
+	height: 4.5rem;
+	margin-right: .5rem;
+	border: 1px solid #e7e7e7;
+	img{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+.enterprise-img-long{
+	width: 6.5rem;
+    height: 5.2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.enterprise-type{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2rem;
+	height: 2rem;
+	&.type-1{
+		.png-image(logo-bg);
+		background-size: 100% 100%;
+	}
+	&>span{
+		position: absolute;
+		top: 0;
+		left: 3px;
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		.png-image(logo-icon);
+		background-size: 100% 100%;
+	}
+}
+.enterprise-business{
+	font-size: @fs6;
+	color: #999;
+	p{
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+	span{
+		color: #f67e1f;
+	}
+}
+.enterprise-post{
+	font-style: normal;
+    font-size: @fs6;
+    margin-left: .5rem;
+}
+.enterprise-price {
+	margin-top: @margin;
+	.flex-align-center;
+	.justify_content_space_between;
+	.tl-btn{
+		padding: .25rem .25rem .25rem .5rem;
+    	font-size: .7rem;
+		.tl-bg08;
+		line-height: 1.2;
+	}
+	span{
+		font-size: .6rem;
+	}
+}
+@media screen and (max-width: 320px) {
+    .enterprise-price {
+    	flex-direction: column;
+	    align-items: self-start;
+	    margin-top: .4rem;
+	    &>span{
+	    	margin-top: .2rem;
+	    }
+    }
+}
+
+.score{
+	margin: .25rem 0;
+	font-size: @fs6;
+	color: #999;
+	overflow: hidden;
+}
+.score-stars{
+	float: left;
+	overflow: hidden;
+	span{
+		display: inline-block;
+		float: left;
+		width: .8rem;
+    	height: .8rem;
+    	margin-right: 5px;
+		.png-image(stars-icon);
+		background-size: 100% 100%;
+	}
+}
+.score-fraction{
+	margin-left: .25rem;
+}

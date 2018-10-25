@@ -1,0 +1,34 @@
+/*
+ * activity.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.22 Moonlight, Inc.
+ *
+*/
+.activity {
+  padding: 1%;
+}
+.activity img {
+  width: 100%;
+  height: 100%;
+}
+.activity-item {
+  width: 50%;
+  padding: 1%;
+}
+.activity-item > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.activity-item .activity-item-ms:nth-child(2) a {
+  padding: 2% 0 0;
+}
+.activity-item-ms {
+  height: 50%;
+}
+.activity-item-ms a {
+  display: block;
+  height: 100%;
+  padding: 0 0 2%;
+}

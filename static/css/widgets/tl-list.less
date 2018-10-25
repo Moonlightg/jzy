@@ -1,0 +1,68 @@
+/*
+ * tl-list.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.25 Moonlight, Inc.
+ *
+*/
+
+.tl-list-item{
+	position: relative;
+	line-height: 2.2rem;
+    padding: 0 .8rem;
+    background: #fff;
+    &:before {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    content: '';
+	    border-top: 1px solid #e5e5e5;
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	    -webkit-transform: scaleY(0.5);
+	    transform: scaleY(0.5);
+	    z-index: 10;
+	}
+    .tl-item-right i{
+    	font-size: @fs7;
+    	color: #999;
+    }
+    .mui-input-row.mui-input-range{
+    	padding-right: 0;
+    }
+    .mui-input-range input[type='range']::-webkit-slider-thumb{
+		background-color: #fff;
+		box-shadow: 0 0 5px #777;
+	}
+}
+.tl-list {
+	position: relative;
+	margin-bottom: .5rem;
+	&:before {
+	    top: 0;
+	    border-top: 1px solid #eee;
+	}
+	&:after {
+	    bottom: 0;
+	    border-bottom: 1px solid #eee;
+	}
+	&:before, 
+	&:after {
+	    position: absolute;
+	    content: '';
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	    -webkit-transform: scaleY(0.5);
+	    transform: scaleY(0.5);
+	    left: 0;
+	    width: 100%;
+	    z-index: 10;
+	}
+	.tl-list-item:first-child {
+		&:before {
+			display:none;
+		}
+	}
+}
+

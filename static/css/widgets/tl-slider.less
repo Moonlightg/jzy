@@ -1,0 +1,88 @@
+/*
+ * tl-slider.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.24 Moonlight, Inc.
+ *
+*/
+
+.tl-slider{
+	.mui-segmented-control{
+		.flex;
+		line-height: @header_height;
+		border: none;
+		border-radius: 0;
+    	padding: 0 @margin;
+    	font-size: @fs8;
+    	border-bottom: 1px solid #eee;
+    	background: #fff;
+	}
+	.mui-segmented-control .mui-control-item{
+		display: block;
+    	width: auto;
+    	margin-right: @margin;
+    	line-height: @header_height;
+		color: #4d4d4d;
+		border-left: none;
+	}
+	.mui-segmented-control .mui-control-item.mui-active{
+		color: @brand_primary;
+	    background-color: #fff;
+	    border-bottom: 3px solid @brand_primary;
+	}
+	.mui-control-content{
+		height: 17rem;
+	}
+	.more{
+		text-align: right;
+		font-size: @fs7;
+		color: #999;
+	}
+}
+.tl-slider-flex{
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+	.mui-segmented-control{
+		position: relative;
+		z-index: 4;
+		.flex(0);
+		border-bottom: none;
+		box-shadow: 0 0 10px #848484;
+		font-size: @fs7;
+	}
+	.mui-segmented-control .mui-control-item{
+		width: 25%;
+		margin: 0;
+	}
+}
+.tl-slider-flex-content{
+	height: 100%;
+	.flex(1);
+	.mui-scroll-wrapper{
+		img{
+			width: 100%;
+		}
+		&>.tl-btn{
+			position: absolute;
+			right: 1.5rem;
+			bottom: @margin;
+			left: 1.5rem;
+			border-radius: 5rem;
+			line-height: 2.2;
+    		font-size: .8rem;
+    		box-shadow: 0px 2px 5px #a2a2a2;
+		}
+	}
+}
+.tl-slider-control{
+	line-height: @header_height;
+}
+
+// 正方形圆角左右滑动切换
+.tl-slider-fillet{
+	text-align: left;
+	&>img{
+		border-radius: 5px;
+	}
+}

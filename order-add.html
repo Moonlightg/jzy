@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>填写订单信息</title>
+		<link href="static/lib/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="static/css/animate.css" rel="stylesheet" />
+		<link href="static/css/app-base.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- 开始 -->
+		<div class="tl-container">
+			<!-- 头部 header -->
+			<header class="tl-header">
+				<div class="tl-header-left">
+					<a href="demand-type.html">
+						<i class="tl-icon-chevron-left"></i>
+					</a>
+				</div>
+				<div class="tl-header-info tl-header-title">填写订单信息</div>
+			</header>
+			<!-- 内容 -->
+			<section class="tl-content">
+				<ul class="tl-list">
+					<li class="tl-item tl-list-item">
+						<div class="tl-item-info">住家型家政</div>
+						<div class="tl-item-right flex-align-center"><span class="tl-color">服务介绍</span><i class="tl-icon-chevron-right"></i></div>
+					</li>
+				</ul>
+				<ul class="tl-list">
+					<li class="tl-item tl-list-item">
+						<div class="tl-item-info"><span class="tl-tag-name">指导价格</span></div>
+						<div class="tl-item-right flex-align-center"><span class="tl-color">服务介绍</span><i class="tl-icon-chevron-right"></i></div>
+					</li>
+					<li class="tl-item tl-list-item">
+						<div class="mui-content-padded tl-item-info" id="range-box">  
+					        <h5 style="clear: left;">整行滑块：<span id='block-range-val' style="display: none;">7000</span><span>7000</span></h5>   
+					        <p class="mui-progressbar mui-progressbar-in" data-progress="70"><span></span></p>
+					        <div class="mui-input-row mui-input-range">
+					            <input type="range" id='block-range' value="50" min="0" max="100" >
+					        </div>
+					    </div>
+					</li>
+				</ul>
+				<ul class="tl-list">
+					<li class="tl-item tl-list-item">
+						<div class="tl-item-info">住家型家政</div>
+						<div class="tl-item-right flex-align-center"><span class="tl-color">服务介绍</span><i class="tl-icon-chevron-right"></i></div>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<script src="static/lib/mui/js/mui.min.js"></script>
+		<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			var progressbar1 = mui('#range-box');
+			mui(progressbar1).progressbar().setProgress(70)
+			progressbar1.on('tap', 'a', function() {
+				mui(progressbar1).progressbar().setProgress(this.getAttribute('data-progress'));
+			});
+		    //监听input事件，获取range的value值，也可以直接element.value获取该range的值
+		    var rangeList = document.querySelectorAll('input[type="range"]');
+		    for(var i=0,len=rangeList.length;i<len;i++){
+		        rangeList[i].addEventListener('input',function(){
+		            if(this.id.indexOf('field')>=0){
+		                document.getElementById(this.id+'-input').value = this.value;
+		            }else{
+		                document.getElementById(this.id+'-val').innerHTML = this.value;
+		            }
+		            
+		
+		        });
+		    }
+
+		    document.getElementById('field-range-input').addEventListener('input',function(){
+		        document.getElementById('field-range').value = this.value;
+		    });
+		</script>
+	</body>
+
+</html>

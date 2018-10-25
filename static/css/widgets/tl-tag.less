@@ -1,0 +1,35 @@
+/*
+ * tl-tag.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.24 Moonlight, Inc.
+ *
+*/
+
+.tl-tag{
+	.justify_content_space_between;
+	height: @header_height;
+	padding: 0 @margin;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+	.more {
+	    text-align: right;
+	    font-size: @fs7;
+	    color: #999;
+	}
+}
+.tl-tag-name{
+	position: relative;
+	padding-left: @margin;
+	color: @brand_primary;
+	&:before{
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		width: .25rem;
+		height: 100%;
+		border-radius: 10px;
+		background: @brand_primary;
+	}
+}

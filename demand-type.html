@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>需求</title>
+		<link href="static/lib/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="static/css/animate.css" rel="stylesheet" />
+		<link href="static/css/app-base.css" rel="stylesheet" />
+		<style>
+			.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item,
+			.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item.mui-active {
+				border: 0px;
+				/*color: green;*/
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}		
+		</style>
+	</head>
+	<body>
+		<!-- 开始 -->
+		<div class="tl-container">
+			<!-- 头部 header -->
+			<header class="tl-header">
+				<div class="tl-header-left">
+					<a href="demand.html">
+						<i class="tl-icon-chevron-left"></i>
+					</a>
+				</div>
+				<div class="tl-header-info tl-header-title">选择服务类型</div>
+				<div class="tl-header-right flex-align-center">
+					<i class="tl-icon-plus-circle"></i>
+				</div>
+			</header>
+			<!-- 搜索 -->
+			<div id="search">
+				<div class="search-wrap">
+					<div class="mui-input-row mui-search">
+						<input id="goSearch" type="search" class="mui-input-clear" placeholder="快速搜索服务类型">
+					</div>
+				</div>
+			</div>
+			<!-- 内容 -->
+			<section class="tl-content">
+				<div class="mui-content mui-row mui-fullscreen demand-wrap">
+					<div class="mui-col-xs-3">
+						<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical demand-menu">
+						</div>
+					</div>
+					<div id="segmentedControlContents" class="mui-col-xs-9 demand-content">
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="static/lib/mui/js/mui.min.js"></script>
+		<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+		<script>
+			mui.init({});
+			// 搜索
+			mui.back = function() {
+				plus.webview.currentWebview().hide("auto", 300);
+			}
+			//监听搜索跳转
+			window.addEventListener('gotoSearch', function(event) {
+				$("#goSearch").val("");
+			});
+			mui.plusReady(function() {
+				//右滑返回隐藏webview
+				plus.webview.currentWebview().setStyle({
+					'popGesture': 'hide'
+				});
+			})
+			//监听搜索完成事件
+			document.getElementById("goSearch").addEventListener("keydown", function(e) {
+				if(13 == e.keyCode) { //点击了“搜索”  
+					document.activeElement.blur(); //隐藏软键盘 
+					mui.alert("你搜索了：" + $("#goSearch").val());
+				}
+			}, false);
+			// 类型列表交互
+			var controls = document.getElementById("segmentedControls");
+			var contents = document.getElementById("segmentedControlContents");
+			var html = [];
+			var str = "",
+				str1 = "",
+				i = 1,
+				j = 1,
+				m = 7, //左侧选项卡数量+1
+				n = 7, //每个选项卡列表数量+1
+				typeName = ["", "保洁清洗", "保姆月嫂", "管道疏通", "家具维修", "搬家运输", "绿化除虫"],
+				typeNameIcon = ["", "tl-icon-camera tl-bg01", "tl-icon-camera-off tl-bg02", "tl-icon-clock tl-bg03", "tl-icon-command tl-bg04", "tl-icon-codepen tl-bg05", "tl-icon-cloud-lightning tl-bg06"];
+			for(; i < m; i++) {
+				str += '<li class="mui-table-view-cell mui-media mui-control-item" data-index="' + (i - 1) + '" href="#content' + i + '" " >';
+				str += '		<div class="demand-icon"><i class="' + typeNameIcon[i] + '"></i></div>';
+				str += '		<p class="left_name">' + typeName[i] + '</p>';
+				str += '</li>';
+			}
+			controls.innerHTML = str;
+			html = [];
+
+			var item = [
+				{},
+				{value:["", "厨卫清理", "钟点工保洁", "开荒保洁", "高空清晰", "家电清晰", "家居清晰"]},
+				{value:["", "全能保姆", "包月钟点工", "金牌月嫂", "护工护理", "养育儿师", "催乳师", "小儿推拿", "产后恢复"]},
+				{value:["", "马桶疏通", "下水道疏通", "管道改造", "化肥厂清理"]},
+				{value:["", "家电维修", "家具维修", "家居维护", "电脑维修", "线路检查", "房屋装修", "家电安装"]},
+				{value:["", "搬家拉货", "预约搬家", "长途运输", "短途运输", "大型货车"]},
+				{value:["", "草坪保养", "庄园打理", "定时除虫", "上门灭虫"]}
+			]
+
+			for(i = 1; i < m; i++) {
+				html.push('<div id="content' + i + '" class="mui-control-content ShopdetailsItem"><div class="demand-title"><span>' + typeName[i] + '</span></div><ul class="mui-table-view mui-grid-view mui-grid-9" style="">');
+				// console.log(ooo[i].value);
+				var arr = item[i].value;
+				for(j = 1; j < arr.length; j++) {
+					html.push('<li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4" title=' + arr[j] + '><div class="tl-btn tl-btn-white">' + arr[j] + '</div></li>')
+				}
+				html.push('</ul></div>');
+			}
+			contents.innerHTML = html.join('');
+			//默认选中第一个 
+			controls.querySelector('.mui-control-item').classList.add('left-mui-active');
+			(function() {
+				var controlsElem = document.getElementById("segmentedControls");
+				var contentsElem = document.getElementById("segmentedControlContents");
+				var controlListElem = controlsElem.querySelectorAll('.mui-control-item');
+				var contentListElem = contentsElem.querySelectorAll('.mui-control-content');
+				var controlWrapperElem = controlsElem.parentNode;
+				var controlWrapperHeight = controlWrapperElem.offsetHeight;
+				var controlMaxScroll = controlWrapperElem.scrollHeight - controlWrapperHeight; //左侧类别最大可滚动高度
+				var maxScroll = contentsElem.scrollHeight - contentsElem.offsetHeight; //右侧内容最大可滚动高度
+				var controlHeight = controlListElem[0].offsetHeight; //左侧类别每一项的高度
+				var controlTops = []; //存储control的scrollTop值
+				var contentTops = [0]; //存储content的scrollTop值
+				var length = contentListElem.length;
+				for(var i = 0; i < length; i++) {
+					controlTops.push(controlListElem[i].offsetTop + controlHeight);
+				}
+				for(var i = 1; i < length; i++) {
+					var offsetTop = contentListElem[i].offsetTop;
+					if(offsetTop + 100 >= maxScroll) {
+						var height = Math.max(offsetTop + 100 - maxScroll, 100);
+						var totalHeight = 0;
+						var heights = [];
+						for(var j = i; j < length; j++) {
+							var offsetHeight = contentListElem[j].offsetHeight;
+							totalHeight += offsetHeight;
+							heights.push(totalHeight);
+						}
+						for(var m = 0, len = heights.length; m < len; m++) {
+							contentTops.push(parseInt(maxScroll - (height - heights[m] / totalHeight * height)));
+						}
+						break;
+					} else {
+						contentTops.push(parseInt(offsetTop));
+					}
+				}
+				contentsElem.addEventListener('scroll', function() {
+					var scrollTop = contentsElem.scrollTop;
+					for(var i = 0; i < length; i++) {
+						var offsetTop = contentTops[i];
+						var offset = Math.abs(offsetTop - scrollTop);
+						if(scrollTop < offsetTop) {
+							if(scrollTop >= maxScroll) {
+								onScroll(length - 1);
+							} else {
+								onScroll(i - 1);
+							}
+							break;
+						} else if(offset < 20) {
+							onScroll(i);
+							break;
+						} else if(scrollTop >= maxScroll) {
+							onScroll(length - 1);
+							break;
+						}
+					}
+ 
+				});
+				var lastIndex = 0;
+				//监听content滚动
+				var onScroll = function(index) {
+					if(lastIndex !== index) {
+						lastIndex = index;
+						var lastActiveElem = controlsElem.querySelector('.left-mui-active');
+						lastActiveElem && (lastActiveElem.classList.remove('left-mui-active'));
+						var currentElem = controlsElem.querySelector('.mui-control-item:nth-child(' + (index + 1) + ')');
+						currentElem.classList.add('left-mui-active');
+						//简单处理左侧分类滚动，要么滚动到底，要么滚动到顶
+						var controlScrollTop = controlWrapperElem.scrollTop;
+						if(controlScrollTop + controlWrapperHeight < controlTops[index]) {
+							controlWrapperElem.scrollTop = controlMaxScroll;
+						} else if(controlScrollTop > controlTops[index] - controlHeight) {
+							controlWrapperElem.scrollTop = 0;
+						}
+					}
+				};
+				//滚动到指定content
+				var scrollTo = function(index) {
+					contentsElem.scrollTop = contentTops[index];
+				};
+				mui(controlsElem).on('tap', '.mui-control-item', function(e) {
+					scrollTo(this.getAttribute('data-index'));
+					return false;
+				});
+				//点击详细分类
+				mui("#segmentedControlContents").on("tap", "li", function() {
+					//mui.alert("点击了：" + $(this).attr("title"));
+					mui.alert("选择了：" + $(this).attr("title"), '选择服务', function() {
+						mui.openWindow({  
+						    url: 'order-add.html'
+						}) 
+					});
+				})
+ 
+			})();
+		</script>
+	</body>
+
+</html>

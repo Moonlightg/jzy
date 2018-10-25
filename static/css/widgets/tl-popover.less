@@ -1,0 +1,52 @@
+/*
+ * tl-popover.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.24 Moonlight, Inc.
+ *
+*/
+
+
+.tl-popover{
+	width: 90%;
+	height: 13.5rem;
+    top: 50%;
+    left: 50%;
+    margin-top: -6.75rem;
+    margin-left: -45%;
+    padding: @margin;
+    /*移除底部或顶部三角,需要在删除此代码*/
+	.mui-popover-arrow:after {
+		width: 0px;
+	}
+	.login-form{
+		margin: 0;
+	}
+	.login-form-item{
+		margin-top: @margin;
+		padding-right: .4rem;
+		border:1px solid #dfdfdf;
+	}
+	&.coupon{
+		width: 280px;
+		height: 364px;
+		margin-top: -182px;
+    	margin-left: -140px;
+    	padding: 0;
+    	background: transparent;
+    	img{
+    		width: 100%;
+    	}
+    	.coupon-link{
+    		position: absolute;
+    		bottom: 30px;
+    		left: 0;
+    		height: 2.5rem;
+    		width: 100%;
+    	}
+	}
+}
+.tl-popover-title{
+	padding: .5rem 0;
+	text-align: center;
+}

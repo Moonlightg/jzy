@@ -1,0 +1,35 @@
+/*
+ * tl-banner.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.22 Moonlight, Inc.
+ *
+*/
+.tl-banner {
+  position: relative;
+}
+.tl-banner img {
+  display: block;
+  width: 100%;
+}
+.tl-banner .search-box {
+  position: absolute;
+  z-index: 9;
+  top: .5rem;
+  right: .8rem;
+  left: .8rem;
+}
+.tl-banner .search-icon {
+  position: absolute;
+  left: .5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #777;
+}
+.tl-banner .search-input {
+  border-radius: 3rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  padding-left: 2rem;
+}

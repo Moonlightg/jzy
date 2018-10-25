@@ -1,0 +1,68 @@
+/*
+ * activity.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.22 Moonlight, Inc.
+ *
+*/
+
+.activity {
+	 padding: 1%;
+	 img{
+	    width: 100%;
+	    height: 100%;
+	 }
+}
+.activity-item{
+	width: 50%;
+    padding: 1%;
+    &>a{
+    	display: block;
+	    width: 100%;
+	    height: 100%;
+    }
+    .activity-item-ms:nth-child(2) a{
+		padding: 2% 0 0;
+    }
+}
+.activity-item-ms{
+	height: 50%;
+	a{
+		display: block;
+	    height: 100%;
+	    padding: 0 0 2%;
+	}
+}
+.activity-wrap{
+	height: 100%;
+	.display;
+	.flex_direction(column);
+	background-image: linear-gradient(#ffebed, #f8fdff);
+	.enterprise-list{
+		margin: 0 .5rem @margin;
+		border: 1px solid #e7e7e7;
+    	border-top: none;
+	    background: #fff;
+	    .flex(1); 
+	    overflow: auto;
+	    &::-webkit-scrollbar {
+		    display: none;
+		}
+	}
+}
+.sign-banner{
+	padding: .5rem;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+.sign-title{
+	text-align: center;
+	margin: .3rem 0 @margin;
+	color: #333;
+	span{
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+}

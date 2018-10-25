@@ -1,0 +1,11 @@
+/*
+ * tl-footer.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.19 Moonlight, Inc.
+ *
+*/
+.tl-footer {
+  border-top: 1px solid #e7e7e7;
+  background: #fff;
+}

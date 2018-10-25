@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>需求</title>
+		<script src="static/lib/mui/js/mui.min.js"></script>
+		<link href="static/lib/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="static/css/animate.css" rel="stylesheet" />
+		<link href="static/css/app-base.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- 开始 -->
+		<div class="tl-container">
+			<!-- 头部 header -->
+			<header class="tl-header">
+				<div class="tl-header-left">
+					<i class="tl-icon-map-pin"></i>
+					<span>南宁市</span>
+				</div>
+				<div class="tl-header-info tl-header-title">家政云平台</div>
+				<div class="tl-header-right flex-align-center">
+					<i class="tl-icon-plus-circle"></i>
+				</div>
+			</header>
+			<!-- 内容 -->
+			<section class="tl-content">
+				<div class="tl-slider tl-slider-flex">
+					<div id="segmentedControl" class="mui-segmented-control">
+						<a class="mui-control-item mui-active" href="#item1">保洁清洗</a>
+						<a class="mui-control-item" href="#item2">保姆月嫂</a>
+						<a class="mui-control-item" href="#item3">管道疏通</a>
+						<a class="mui-control-item" href="#item4">家居维修</a>
+					</div>
+					<div class="tl-slider-flex-content">
+						<div id="item1" class="mui-control-content mui-active" style="height: 100%;">
+							<div id="scroll" class="mui-scroll-wrapper">
+								<img src="static/images/map.jpg" alt="" />
+								<!-- 虚拟信息，演示使用，开发时删除重构 -->
+								<a href="javascript:;" id="showUser" style="position: absolute;bottom: 137px; right: 20px; width: 50px;height: 50px; background: transparent; z-index: 9;"></a>
+								<a href="demand-type.html" class="tl-btn tl-btn-primary"><i class="tl-icon-edit"></i>填写服务需求信息</a>
+								<div id="showUserBox" style=" position: absolute; bottom: .5rem; left: 1rem; right: 1rem;" class="mui-hidden bounceInUp animated">
+									<!-- 用户简介卡片 保留该板块-->
+									<div class="user-card">
+										<div class="tl-item-info">
+											<div class="tl-item">
+												<div class="tl-item-left">
+													<div class="user-box">
+														<img src="static/images/user.jpg" alt="" />
+													</div>
+												</div>
+												<div class="tl-item-info">
+													<div class="tl-title flex">
+														<span class="tl-item-info">周阿姨<em class="enterprise-post">保姆月嫂</em></span>
+														<span class="tl-item-right">
+															<a href="javascript:;" class="tl-btn tl-btn-ms">可预约</a>
+														</span>
+													</div>
+													<div class="score flex-align-center">
+														<div class="score-stars">
+															<span></span>
+															<span></span>
+															<span></span>
+															<span></span>
+															<span></span>
+														</div>
+														<span class="score-fraction">好评98%</span>
+													</div>
+												</div>
+											</div>
+											<div class="enterprise-business">
+												<p>36岁 | 广西人 | <span>4年</span>工作 | 已接<span>68单</span></p>
+											</div>
+										</div>
+										<div class="tl-item-right flex-align-center">
+											<a href="javascript:;" class="tl-btn tl-btn-primary square">立即预约</a>
+										</div>
+										<div id="hideUser" class="user-card-close">
+											<i class="tl-icon-x"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="item2" class="mui-control-content" style="height: 100%;">
+							<ul class="enterprise-list">
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise2.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">福万家家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>0.8km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">7项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">9折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评99%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：日常保洁 | 外墙服务</p>
+										</div>
+									</div>
+								</li>
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise3.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">姆妈家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>1.1km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">8项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">7折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评97%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：厨房保养 | 日常保洁</p>
+										</div>
+									</div>
+								</li>
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">诚信家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>0.1km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">10项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">8折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评98%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：厨房保养 | 日常保洁 | 外墙服务</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="item3" class="mui-control-content" style="height: 100%;">
+							<ul class="enterprise-list">
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise2.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">福万家家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>0.8km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">7项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">9折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评99%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：日常保洁 | 外墙服务</p>
+										</div>
+									</div>
+								</li>
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise3.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">姆妈家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>1.1km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">8项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">7折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评97%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：厨房保养 | 日常保洁</p>
+										</div>
+									</div>
+								</li>
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">诚信家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>0.1km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">10项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">8折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评98%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：厨房保养 | 日常保洁 | 外墙服务</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div id="item4" class="mui-control-content" style="height: 100%;">
+							<ul class="enterprise-list">
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise2.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">福万家家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>0.8km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">7项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">9折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评99%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：日常保洁 | 外墙服务</p>
+										</div>
+									</div>
+								</li>
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise3.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">姆妈家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>1.1km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">8项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">7折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评97%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：厨房保养 | 日常保洁</p>
+										</div>
+									</div>
+								</li>
+								<li class="tl-item">
+									<div class="tl-item-left enterprise-img">
+										<div class="enterprise-type type-1">
+											<span></span>
+										</div>
+										<img src="static/images/enterprise.jpg" alt="" />
+									</div>
+									<div class="tl-item-info">
+										<div class="tl-title flex">
+											<span class="tl-item-info">诚信家政服务有限公司</span>
+											<span class="tl-item-right distance">
+												<i class="tl-icon-map-pin"></i>0.1km
+											</span>
+										</div>
+										<div class="enterprise-discount">
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-1">10项优惠服务</a>
+											<a href="javascript:;" class="tl-btn tl-btn-ms tl-btn-link-2">8折优惠</a>
+										</div>
+										<div class="score flex-align-center">
+											<div class="score-stars">
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+												<span></span>
+											</div>
+											<span class="score-fraction">好评98%</span>
+										</div>
+										<div class="enterprise-business">
+											<p>主营业务：厨房保养 | 日常保洁 | 外墙服务</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- 底部 -->
+			<footer class="tl-footer">
+				<ul class="tl-nav">
+					<li>
+						<a href="index.html">
+							<i class="tl-icon-home"></i>
+							<span>首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="preferential.html">
+							<i class="tl-icon-gift">
+								<span class="new"></span>
+							</i>
+							<span>特惠</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="javascript:;">
+							<i class="tl-icon-clipboard"></i>
+							<span>需求</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="tl-icon-file-text"></i>
+							<span>订单</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="tl-icon-user"></i>
+							<span>我的</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			// 点击头像显示简介
+		    document.getElementById('showUser').addEventListener('tap',function(){
+				document.getElementById('showUserBox').classList.remove("mui-hidden");
+		    });
+		    document.getElementById('hideUser').addEventListener('tap',function(){
+				document.getElementById('showUserBox').classList.add("mui-hidden");
+		    });
+			(function($) {
+				$('#scroll').scroll({
+					indicators: true //是否显示滚动条
+				});
+			})(mui);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+/*
+ * tl-bar.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.22 Moonlight, Inc.
+ *
+*/
+
+.tl-bar{
+	position: relative;
+	height: .5rem;
+	background: #f2f2f2;
+	&:before,
+	&:after {
+	    position: absolute;
+	    content: '';
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	    -webkit-transform: scaleY(0.5);
+	    transform: scaleY(0.5);
+	    left: 0;
+	    width: 100%;
+	    z-index: 10;
+	}
+	&:before{
+		top: 0;  
+		border-top: 1px solid #eee;  
+	}
+	&:after{
+		bottom: 0;    
+		border-bottom: 1px solid #eee;  
+	}
+}

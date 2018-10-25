@@ -1,0 +1,43 @@
+/*
+ * tl-header.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.19 Moonlight, Inc.
+ *
+*/
+
+.tl-header {
+	position: relative;
+    .display;
+    .justify_content_center;
+    height: @header_height;
+    background: @brand_primary;
+    color: #fff;
+    a{
+        color: #fff;
+    }
+}
+.tl-header-left,
+.tl-header-title,
+.tl-header-right{
+	line-height: @header_height;
+}
+.tl-header-left{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0 .5rem;
+	font-size: @fs8;
+}
+.tl-header-title{
+    font-size: 1rem;
+	color: #fff;
+}
+.tl-header-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 @margin;
+}

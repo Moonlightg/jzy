@@ -1,0 +1,35 @@
+/*
+ * tl-divider.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.22 Moonlight, Inc.
+ *
+*/
+
+// 分割线
+.tl-divider{
+	position: relative;
+    text-align: center;
+    height: 1rem;
+    .display;
+    .justify_content_center;
+    .align_items_center;
+	&:before {
+		position: absolute;
+	    top: .5rem;
+	    left: 0;
+	    content: "";
+	    display: block;
+	    width: 100%;
+	    height: 1px;
+	    background: #eee;
+	}
+	span {
+	    display: inline-block;
+	    position: relative;
+	    padding: 0 .5rem;
+	    background: #fff;
+	    font-size: .75rem;
+	    color: #999;
+	}
+}

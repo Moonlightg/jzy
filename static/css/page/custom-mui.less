@@ -1,0 +1,36 @@
+/*
+ * custiom-mui.less
+ * 自定义MUI的部分样式
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.22 Moonlight, Inc.
+ *
+*/
+
+.mui-slider-indicator .mui-indicator{
+	
+	width: .5rem;
+	height: .5rem;
+	margin: 1px .1rem;
+	background: #fff;
+	box-shadow: none;
+}
+.mui-slider-indicator .mui-active.mui-indicator{
+	background: @brand_primary;
+}
+
+.mui-view{
+	height: 100%;
+    .display;
+    .flex_direction(column);
+}
+.mui-pages{
+	.flex_initial(1);
+    .touch();
+    .mui-page {
+	    display: block;
+	}
+}
+.mui-page {
+    display: none;
+}
