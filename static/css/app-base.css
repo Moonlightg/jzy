@@ -1232,22 +1232,22 @@ h2 {
   margin-bottom: .5rem;
 }
 .tl-list:before {
-  border-top: 1px solid #eee;
+  top: 0;
 }
 .tl-list:after {
-  border-bottom: 1px solid #eee;
+  bottom: 0;
 }
 .tl-list:before,
 .tl-list:after {
   position: absolute;
+  right: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
   content: '';
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
   transform: scaleY(0.5);
-  left: 0;
-  width: 100%;
-  background: none;
+  background-color: #eee;
   z-index: 10;
 }
 .tl-list > li {
