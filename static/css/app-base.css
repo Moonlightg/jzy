@@ -1904,6 +1904,7 @@ h2 {
   margin-top: -6.75rem;
   margin-left: -45%;
   padding: 0.8rem;
+  background: #fff;
   /*移除底部或顶部三角,需要在删除此代码*/
 }
 .tl-popover .mui-popover-arrow:after {
