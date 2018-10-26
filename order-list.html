@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订单</title>
+		<script src="static/lib/mui/js/mui.min.js"></script>
+		<link href="static/lib/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="static/css/animate.css" rel="stylesheet" />
+		<link href="static/css/app-base.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- 开始 -->
+		<div class="tl-container">
+			<!-- 头部 header -->
+			<header class="tl-header">
+				<div class="tl-header-left">
+					<i class="tl-icon-map-pin"></i>
+					<span>南宁市</span>
+				</div>
+				<div class="tl-header-info tl-header-title">家政云平台</div>
+				<div class="tl-header-right flex-align-center">
+					<i class="tl-icon-plus-circle"></i>
+				</div>
+			</header>
+			<!-- 内容 -->
+			<section class="tl-content">
+				<div id="slider" class="mui-slider mui-fullscreen tl-slider-new">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll">
+							<a class="mui-control-item mui-active" data-index="0">全部</a>
+							<a class="mui-control-item" data-index="1">带接单</a>
+							<a class="mui-control-item" data-index="2">待确认</a>
+							<a class="mui-control-item" data-index="3">进行中</a>
+							<a class="mui-control-item" data-index="4">已完成</a>
+							<a class="mui-control-item" data-index="5">已取消</a>
+							<a class="mui-control-item order-abnormal-tag" data-index="6">异常</a>
+						</div>
+					</div>
+
+					<div class="mui-slider-group">
+						<div class="mui-slider-item mui-control-content mui-active">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="order-list">
+						                <div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：00001111</span>
+						                            <span class="tl-item-right assist assist-high">待接单</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                        <a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">取消订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">催促接单</a>
+						                    </div>
+						                </div>
+						                <div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000222</span>
+						                            <span class="tl-item-right assist assist-high">待确认</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                        <a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">取消订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">确认订单</a>
+						                    </div>
+						                </div>
+						                <div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000333</span>
+						                            <span class="tl-item-right assist assist-high">进行中</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                        <a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">取消订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">确认完成</a>
+						                    </div>
+						                </div>
+						                <div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000444</span>
+						                            <span class="tl-item-right assist assist-high">已完成</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                    	<a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">删除订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">订单评价</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">续费订单</a>
+						                    </div>
+						                </div>
+						            </div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="order-list">
+						                <div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：00001111</span>
+						                            <span class="tl-item-right assist assist-high">待接单</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                        <a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">取消订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">催促接单</a>
+						                    </div>
+						                </div>
+						            </div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="order-list">
+										<div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000222</span>
+						                            <span class="tl-item-right assist assist-high">待确认</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                        <a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">取消订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">确认订单</a>
+						                    </div>
+						                </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="order-list">
+										<div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000333</span>
+						                            <span class="tl-item-right assist assist-high">进行中</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                        <a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">取消订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">确认完成</a>
+						                    </div>
+						                </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="order-list">
+										<div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000444</span>
+						                            <span class="tl-item-right assist assist-high">已完成</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                    	<a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">删除订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">订单评价</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">续费订单</a>
+						                    </div>
+						                </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="order-list">
+										<div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000555</span>
+						                            <span class="tl-item-right assist assist-high">已取消</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                    	<a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">删除订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">确认退款</a>
+						                    </div>
+						                </div>
+						                <div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000666</span>
+						                            <span class="tl-item-right assist assist-high">已取消</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                    	<a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">删除订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">确认退款</a>
+						                    </div>
+						                </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="order-list">
+										<div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000777</span>
+						                            <span class="tl-item-right assist tl-color08"><i class="tl-icon-alert-circle"></i>异常（拒绝订单）</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                    	<p>5小时30分后自动确认</p>
+						                    	<a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">取消订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">确认异常</a>
+						                    </div>
+						                </div>
+						                <div class="order-list-item">
+						                    <div class="order-list-content">
+						                        <div class="tl-item list-title">
+						                            <span class="tl-item-info assist">订单号：0000888</span>
+						                            <span class="tl-item-right assist tl-color08"><i class="tl-icon-alert-circle"></i>异常（更换人员）</span>
+						                        </div>
+						                        <div class="tl-item tl-padding-ud">
+						                            <div class="tl-item-left flex-center">
+						                                <img src="static/images/order-img01.png" class="order-user"/>
+						                            </div>
+						                            <div class="tl-item-info order-type-box">
+						                                <p class="order-type-name">住家型家政</p>
+						                                <span>服务时间：2018-10-04 08：80</span>
+						                                <span>服务人员：周阿姨</span>
+						                            </div>
+						                        </div>
+						                        <div class="tl-item order-sketch">
+						                            <div class="flex tl-item-info">
+						                                <div class="order-sketch-item">
+						                                    共<span>4</span>项服务内容
+						                                </div>
+						                                <div class="order-sketch-item">
+						                                    优惠<span>100元</span>
+						                                </div>
+						                            </div>
+						                            <div class="tl-item-right">
+						                                <div class="order-sketch-item">
+						                                    合计：<span class="tl-color08">5900元</span>
+						                                </div>
+						                            </div>
+						                        </div>
+						                    </div>
+						                    <div class="order-list-footer">
+						                    	<p>5小时30分后自动确认</p>
+						                    	<a href="javascript:;" class="tl-btn tl-btn-link tl-btn-circle">取消订单</a>
+						                        <a href="javascript:;" class="tl-btn tl-btn-circle">确认异常</a>
+						                    </div>
+						                </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</section>
+			<!-- 底部 -->
+			<footer class="tl-footer">
+				<ul class="tl-nav">
+					<li>
+						<a href="index.html">
+							<i class="tl-icon-home"></i>
+							<span>首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="preferential.html">
+							<i class="tl-icon-gift">
+								<span class="new"></span>
+							</i>
+							<span>特惠</span>
+						</a>
+					</li>
+					<li>
+						<a href="demand.html">
+							<i class="tl-icon-clipboard"></i>
+							<span>需求</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="javascript:;">
+							<i class="tl-icon-file-text"></i>
+							<span>订单</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="tl-icon-user"></i>
+							<span>我的</span>
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			mui('.mui-scroll-wrapper').scroll({
+				bounce: true,
+				indicators: true,
+				deceleration:mui.os.ios?0.003:0.0009
+			});
+			mui('.mui-scroll').on('tap','.mui-control-item:not(.mui-active)',function(){
+				mui('.mui-slider').slider().gotoItem(this.getAttribute('data-index'));
+			});
+		});
+		</script>
+	</body>
+
+</html>
