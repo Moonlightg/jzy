@@ -1389,7 +1389,7 @@ h2 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  margin-top: 0.4rem;
+  padding-top: 0.4rem;
   background: #fff;
 }
 .tl-menu li {
@@ -1889,6 +1889,7 @@ h2 {
 }
 .tl-slider .mui-control-content {
   height: 17rem;
+  background: #fff;
 }
 .tl-slider .more {
   text-align: right;
@@ -1986,6 +1987,9 @@ h2 {
 .tl-slider-new .mui-segmented-control.mui-scroll-wrapper,
 .tl-slider-new .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
   height: 2.2rem;
+}
+.tl-slider-new .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+  background: #fff;
 }
 .tl-slider-new .mui-segmented-control .mui-control-item,
 .tl-slider-new .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
