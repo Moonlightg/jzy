@@ -1287,6 +1287,9 @@ h2 {
   transform: scaleY(0.5);
   background-color: #eee;
 }
+.tl-list > li:last-child:after {
+  display: none;
+}
 .tl-list > li .label {
   color: #bfbbba;
 }
@@ -1710,7 +1713,7 @@ h2 {
 .btn-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -1%;
+  margin: 0.5rem -1%;
 }
 .btn-wrap .tl-btn {
   border-radius: 0;
