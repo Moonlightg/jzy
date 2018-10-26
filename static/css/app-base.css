@@ -132,6 +132,18 @@ html {
   -webkit-justify-content: center;
   justify-content: center;
 }
+.flex-space-between {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
 .display {
   display: -webkit-flex;
   display: -moz-flex;
@@ -1155,6 +1167,7 @@ h2 {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  background: #fff;
 }
 .tl-item-left {
   -webkit-box-flex: 0;
@@ -1236,7 +1249,58 @@ h2 {
   transform: scaleY(0.5);
   left: 0;
   width: 100%;
+  background: none;
   z-index: 10;
+}
+.tl-list > li {
+  position: relative;
+  line-height: 2.2rem;
+  padding: 0 .8rem;
+}
+.tl-list > li .tl-icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  /*垂直居中*/
+  /*老版本语法*/
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  /*混合版本语法*/
+  -ms-flex-align: center;
+  /*新版本语法*/
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #15c8b5;
+  margin-right: 0.8rem;
+}
+.tl-list > li:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background-color: #eee;
+}
+.tl-list > li .label {
+  color: #bfbbba;
+}
+.tl-list > li .mui-table-view:before {
+  display: none;
+}
+.tl-list > li .mui-table-view .tl-btn {
+  width: 100%;
+}
+.tl-list .mui-navigate-right {
+  padding-right: 1rem;
+}
+.tl-list.tl-icon-list li:after {
+  left: 2.2rem;
 }
 .tl-list .tl-list-item:first-child:before {
   display: none;
@@ -1578,6 +1642,14 @@ h2 {
 .tl-btn-white:active {
   color: #444;
 }
+.tl-btn-link {
+  color: #333;
+  border-color: #c8c8c8;
+}
+.tl-btn-link:hover,
+.tl-btn-link:active {
+  color: #555;
+}
 .tl-btn-link-1 {
   color: #ffcc00;
   border-color: #ffcc00;
@@ -1635,6 +1707,17 @@ h2 {
   background-image: url('../images/adorn.png');
   background-size: 100% 100%;
 }
+.btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1%;
+}
+.btn-wrap .tl-btn {
+  border-radius: 0;
+  width: 31.333333%;
+  margin: 1%;
+  line-height: 1.8;
+}
 /*
  * tl-input.less
  * v1.2.0 MIT License
@@ -1667,6 +1750,14 @@ h2 {
 }
 .search-wrap .mui-active:before {
   line-height: 34px;
+}
+.tl-textarea {
+  padding: 0.8rem;
+  margin: 0;
+  border: none;
+}
+.tl-textarea::-webkit-input-placeholder {
+  color: #bfbbba;
 }
 /*
  * tl-divider.less
@@ -1851,6 +1942,27 @@ h2 {
 .tl-slider-fillet > img {
   border-radius: 5px;
 }
+.tl-slider-bar {
+  overflow: hidden;
+}
+.tl-slider-bar .mui-progressbar {
+  overflow: initial;
+  margin: 1rem 0;
+}
+.tl-slider-bar .mui-progressbar span {
+  background: #15c8b5;
+}
+.tl-slider-bar .mui-progressbar span:before {
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  content: "";
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 0 5px #999;
+}
 /*
  * tl-tag.less
  * v1.2.0 MIT License
@@ -1878,6 +1990,7 @@ h2 {
   position: relative;
   padding-left: 0.8rem;
   color: #15c8b5;
+  line-height: 1;
 }
 .tl-tag-name:before {
   position: absolute;
@@ -1973,6 +2086,9 @@ h2 {
 }
 .tl-color08 {
   color: #fd7720;
+}
+.tl-color09 {
+  color: #fe761e;
 }
 .tl-bg {
   background: #fff;
@@ -2217,6 +2333,7 @@ h2 {
 */
 .activity {
   padding: 1%;
+  background: #fff;
 }
 .activity img {
   width: 100%;
@@ -2294,6 +2411,9 @@ h2 {
  * Copyright (c) 2018.10.24 Moonlight, Inc.
  *
 */
+.enterprise-list {
+  background: #fff;
+}
 .enterprise-list li {
   padding: .5rem 0;
   margin: 0 0.8rem;
