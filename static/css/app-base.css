@@ -1339,7 +1339,20 @@ h2 {
 .tl-header-left,
 .tl-header-title,
 .tl-header-right {
-  line-height: 2.2rem;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  /*垂直居中*/
+  /*老版本语法*/
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  /*混合版本语法*/
+  -ms-flex-align: center;
+  /*新版本语法*/
+  -webkit-align-items: center;
+  align-items: center;
 }
 .tl-header-left {
   position: absolute;
@@ -1348,6 +1361,9 @@ h2 {
   left: 0;
   padding: 0 .5rem;
   font-size: 0.875rem;
+}
+.tl-header-left .tl-icon-map-pin {
+  margin-right: .25rem;
 }
 .tl-header-title {
   font-size: 1rem;
@@ -1576,6 +1592,16 @@ h2 {
   border-color: #15c8b5;
   vertical-align: middle;
   line-height: 1.4;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+}
+.tl-btn:enabled:active {
+  border: 1px solid #15c8b5;
+  background-color: #15c8b5;
 }
 .tl-btn > i {
   margin-right: .2rem;
@@ -1643,6 +1669,13 @@ h2 {
 .tl-btn-white:active {
   color: #444;
 }
+.tl-btn:enabled:active,
+.tl-btn-link:enabled:active,
+.tl-btn-link1:enabled:active,
+.tl-btn-link2:enabled:active,
+.tl-btn-link3:enabled:active {
+  color: #fff;
+}
 .tl-btn-link {
   color: #333;
   border-color: #c8c8c8;
@@ -1650,6 +1683,10 @@ h2 {
 .tl-btn-link:hover,
 .tl-btn-link:active {
   color: #555;
+}
+.tl-btn-link:enabled:active {
+  border: 1px solid #c8c8c8;
+  background-color: #c8c8c8;
 }
 .tl-btn-link-1 {
   color: #ffcc00;
@@ -1659,6 +1696,10 @@ h2 {
 .tl-btn-link-1:active {
   color: #ffcc00;
 }
+.tl-btn-link-1:enabled:active {
+  border: 1px solid #ffcc00;
+  background-color: #ffcc00;
+}
 .tl-btn-link-2 {
   color: #f78c1a;
   border-color: #f78c1a;
@@ -1667,6 +1708,10 @@ h2 {
 .tl-btn-link-2:active {
   color: #f78c1a;
 }
+.tl-btn-link-2:enabled:active {
+  border: 1px solid #f78c1a;
+  background-color: #f78c1a;
+}
 .tl-btn-link-3 {
   color: #ff0000;
   border-color: #ff0000;
@@ -1674,6 +1719,10 @@ h2 {
 .tl-btn-link-3:hover,
 .tl-btn-link-3:active {
   color: #ff0000;
+}
+.tl-btn-link-3:enabled:active {
+  border: 1px solid #ff0000;
+  background-color: #ff0000;
 }
 .tl-btn-ms {
   padding: .1rem .25rem;
@@ -2203,6 +2252,72 @@ h2 {
  * Copyright (c) 2018.10.25 Moonlight, Inc.
  *
 */
+.user {
+  width: 60px;
+  height: 60px;
+  font-size: 21.42857143px;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 400;
+  margin: 0 .6rem 0 0;
+  flex-shrink: 0;
+}
+.user.user-img {
+  background: none;
+}
+.user img {
+  display: block;
+  width: 100%;
+}
+.user_s {
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0.57142857rem;
+  -webkit-border-radius: 1.6rem;
+  -moz-border-radius: 1.6rem;
+  border-radius: 1.6rem;
+}
+.user_m {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.07142857rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  border-radius: 3rem;
+}
+.user_l {
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.60714286rem;
+  -webkit-border-radius: 4.5rem;
+  -moz-border-radius: 4.5rem;
+  border-radius: 4.5rem;
+}
+.user_xl {
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.78571429rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  border-radius: 5rem;
+}
+.user-news h2 {
+  font-size: 0.875rem;
+  color: #333;
+  margin-bottom: .4rem;
+}
+.user-news p {
+  display: flex;
+  font-size: 0.75rem;
+  color: #999;
+}
+.user-news p i {
+  margin-right: .25rem;
+}
 .user-box {
   width: 40px;
   height: 40px;
@@ -2911,6 +3026,93 @@ h2 {
 .demand-wrap .demand-menu {
   height: 100%;
   background: #fff;
+}
+/*
+ * personal.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.26 Moonlight, Inc.
+ *
+*/
+.personal-head {
+  width: 100%;
+  height: 10rem;
+  background-image: url('../images/page-bg.jpg');
+  background-size: 100% 100%;
+}
+.personal-head .user-wrap {
+  padding: 2rem 1rem 0;
+}
+.personal-news {
+  position: relative;
+}
+.personal-news .user-news h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: .4rem;
+}
+.personal-news .user-news p {
+  display: flex;
+  font-size: 0.75rem;
+  color: #f2f3d4;
+}
+.personal-news .user-news p i {
+  margin-right: .25rem;
+}
+.personal-type {
+  margin-left: .5rem;
+  padding-left: .5rem;
+  border-left: 1px solid #f2f3d4;
+}
+.personal-set {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+.personal-order {
+  padding: .5rem 1rem;
+  border-radius: .6rem;
+  background: #ffffff;
+  align-items: center;
+  height: 5rem;
+  margin-top: -1rem;
+  margin: -1rem 0.8rem 0;
+}
+.personal-order a {
+  color: #999;
+  font-size: 0.65rem;
+  margin-right: -8px;
+}
+.personal-assets {
+  padding: .4rem .8rem 0;
+  background: none;
+}
+.personal-assets a {
+  color: #fff;
+}
+.personal-assets span {
+  font-size: 0.75rem;
+}
+.personal-assets .num {
+  margin-bottom: .5rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 320px) {
+  .personal-head {
+    height: 8.5rem;
+  }
+  .personal-head .user-wrap {
+    padding: 1.3rem 1rem 0;
+  }
+  .personal-assets {
+    padding: .2rem .4rem 0;
+  }
+  .personal-assets .num {
+    font-size: .8rem;
+    margin-bottom: .35rem;
+  }
 }
 /*
  * custiom-mui.less
