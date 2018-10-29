@@ -90,6 +90,18 @@
   -webkit-justify-content: center;
   justify-content: center;
 }
+.flex-space-between {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
 .display {
   display: -webkit-flex;
   display: -moz-flex;

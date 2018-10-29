@@ -5,6 +5,65 @@
  * Copyright (c) 2018.10.25 Moonlight, Inc.
  *
 */
+//默认头像规格
+.user-w (@w:60px) {
+    width: @w;
+    height: @w;
+    font-size: @w / 2.8;
+    .border_radius(@w); 
+}
+//默认头像
+.user {
+    .user-w();
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400;
+    margin: 0 .6rem 0 0;
+    flex-shrink: 0;
+    &.user-img{
+        background: none;
+    }
+    img{ 
+        display: block;
+        width: 100%;
+    }
+}
+
+//小号头像
+.user_s{
+    .user-w (@user_s);
+}
+
+//中号头像
+.user_m{
+    .user-w (@user_m);
+}
+
+//大号头像
+.user_l{
+    .user-w (@user_l);
+}
+
+//加大号头像
+.user_xl{
+    .user-w (@user_xl);
+}
+.user-news{
+	h2{
+		font-size: @fs8;
+		color: #333;
+		margin-bottom: .4rem;
+	}
+	p{
+		display: flex;
+		font-size: @fs7;
+		color: #999;
+		i{
+			margin-right: .25rem;
+		}
+	}
+}
 
 .user-box{
 	width: 40px;

@@ -32,6 +32,7 @@
 	}
 	.mui-control-content{
 		height: 17rem;
+		background: #fff;
 	}
 	.more{
 		text-align: right;
@@ -50,6 +51,22 @@
 		border-bottom: none;
 		box-shadow: 0 0 10px #848484;
 		font-size: @fs7;
+	}
+	&.no-shadow .mui-segmented-control{
+		box-shadow: none;
+		&:after {
+		    position: absolute;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    height: 1px;
+		    width: 100%;
+		    content: '';
+		    -webkit-transform: scaleY(.5);
+		    transform: scaleY(.5);
+		    background-color: #eee;
+		    z-index: 10;
+		}
 	}
 	.mui-segmented-control .mui-control-item{
 		width: 25%;
@@ -84,5 +101,95 @@
 	text-align: left;
 	&>img{
 		border-radius: 5px;
+	}
+}
+
+// 滑块进度条
+.tl-slider-bar{
+	overflow: hidden;
+	.mui-progressbar{
+		overflow: initial;
+		margin: 1rem 0;
+		span{
+			background: @brand_primary;
+			&:before{
+				position:absolute;
+				top: -13px;
+    			right: -13px;
+				content: "";
+				width: 26px;
+				height: 26px;
+				border-radius: 26px;
+				background: #fff;
+				box-shadow: 0 0 5px #999;
+			}
+		}
+	}
+}
+
+
+// 新的tab切换
+.tl-slider-new{
+	.mui-segmented-control.mui-scroll-wrapper,
+	.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+		height: @header_height;
+	}
+	.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+		background: #fff;
+	}
+	.mui-segmented-control .mui-control-item,
+	.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+		line-height: @header_height;
+	}
+	.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+		padding: 0 @margin;
+	}
+	.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+		padding: 0 12px;
+	}
+	.mui-segmented-control~.mui-slider-group{
+		top: @header_height;
+	}
+	.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item{
+		border:none;
+	}
+	.mui-segmented-control{
+		font-size: @fs7;
+	}
+	.mui-slider-indicator .mui-scroll{
+		&:after {
+		    position: absolute;
+		    right: 0;
+		    bottom: 1px;
+		    left: 0;
+		    height: 1px;
+		    width: 100%;
+		    content: '';
+		    -webkit-transform: scaleY(.5);
+		    transform: scaleY(.5);
+		    background-color: #e8ebf0;
+		    z-index: 10;
+		}
+	}
+	.mui-control-item{
+		position: relative;
+	}
+	.mui-control-item.mui-active{
+		&:after {
+		    position: absolute;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    height: 5px;
+		    width: 100%;
+		    content: '';
+		    -webkit-transform: scaleY(.5);
+		    transform: scaleY(.5);
+		    background-color: @brand_primary;
+		    z-index: 11;
+		}
+	}
+	.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+		color: @brand_primary;
 	}
 }
