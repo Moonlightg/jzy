@@ -147,7 +147,7 @@
 					<div>
 						<div id="item1" class="mui-control-content mui-active" style="height: 340px;">
 							<div class="mui-scroll-wrapper">
-								<ul class="enterprise-list">
+								<ul class="enterprise-list goEnterprise">
 									<li class="tl-item">
 										<div class="tl-item-left enterprise-img">
 											<div class="enterprise-type type-1">
@@ -553,6 +553,14 @@
 				mui("#popover-coupon").popover('toggle');
 				mui.toast('优惠券领取成功');
 		    });
+		    
+		    mui(".goEnterprise").on('tap','li',function(){
+			    //打开详情
+			    mui.openWindow({
+			   		id:'enterprise',
+			    	url:'enterprise.html'
+			    });
+			}) 
 		</script>
 	</body>
 

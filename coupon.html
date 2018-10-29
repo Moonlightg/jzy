@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>优惠券</title>
+		<script src="static/lib/mui/js/mui.min.js"></script>
+		<link href="static/lib/mui/css/mui.min.css" rel="stylesheet" />
+		<link href="static/css/animate.css" rel="stylesheet" />
+		<link href="static/css/app-base.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- 开始 -->
+		<div class="tl-container">
+			<!-- 头部 header -->
+			<header class="tl-header">
+				<div class="tl-header-left">
+					<a href="page.html">
+						<i class="tl-icon-chevron-left"></i>
+					</a>
+				</div>
+				<div class="tl-header-info tl-header-title">我的优惠券</div>
+			</header>
+			<!-- 内容 -->
+			<section class="tl-content">
+				<div id="slider" class="mui-slider mui-fullscreen tl-slider-new">
+					<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<div class="mui-scroll" style="width: 100%;">
+							<a class="mui-control-item mui-active" data-index="0">平台券（3）</a>
+							<a class="mui-control-item" data-index="1">商家券（4）</a>
+						</div>
+					</div>
+
+					<div class="mui-slider-group">
+						<div class="mui-slider-item mui-control-content mui-active">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="tl-item coupon-item">
+										<div class="tl-item-left">
+											<div class="coupon-type new">
+												<p>9.5 <span>折</span></p>
+												<span>最高抵扣30元</span>
+											</div>
+										</div>
+										<div class="tl-item-info">
+											<h2>家政服务折扣券</h2>
+											<p>有效期至2018.11.01</p>
+											<p>使用更多规则<i class="tl-icon-chevron-down"></i></p>
+										</div>
+										<div class="tl-item-right flex-center">
+											<a href="javascript:;" class="tl-btn">去使用</a>
+										</div>
+									</div>
+									<div class="tl-item coupon-item">
+										<div class="tl-item-left">
+											<div class="coupon-type new">
+												<p>8.8 <span>折</span></p>
+												<span>最高抵扣50元</span>
+											</div>
+										</div>
+										<div class="tl-item-info">
+											<h2>家政服务折扣券</h2>
+											<p>有效期至2018.11.01</p>
+											<p>使用更多规则<i class="tl-icon-chevron-down"></i></p>
+										</div>
+										<div class="tl-item-right flex-center">
+											<a href="javascript:;" class="tl-btn">去使用</a>
+										</div>
+									</div>
+									<div class="tl-item coupon-item">
+										<div class="tl-item-left">
+											<div class="coupon-type new">
+												<p>6 <span>折</span></p>
+												<span>最高抵扣100元</span>
+											</div>
+										</div>
+										<div class="tl-item-info">
+											<h2>家政服务折扣券</h2>
+											<p>有效期至2018.11.01</p>
+											<p>使用更多规则<i class="tl-icon-chevron-down"></i></p>
+										</div>
+										<div class="tl-item-right flex-center">
+											<a href="javascript:;" class="tl-btn">去使用</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-slider-item mui-control-content">
+							<div class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="tl-item coupon-item">
+										<div class="tl-item-left">
+											<div class="coupon-type new">
+												<p>8.8 <span>折</span></p>
+												<span>最高抵扣50元</span>
+											</div>
+										</div>
+										<div class="tl-item-info">
+											<h2>家政服务折扣券</h2>
+											<p>有效期至2018.11.01</p>
+											<p>使用更多规则<i class="tl-icon-chevron-down"></i></p>
+										</div>
+										<div class="tl-item-right flex-center">
+											<a href="javascript:;" class="tl-btn">去使用</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</section>
+			<!-- 底部 -->
+			<footer class="tl-footer">
+				<div class="coupon-footer">
+					<a href="javascript:;">历史优惠券</a>
+					<a href="javascript:;">总换优惠券</a>
+				</div>
+			</footer>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui.ready(function() {
+			mui('.mui-scroll-wrapper').scroll({
+				bounce: true,
+				indicators: true,
+				deceleration:mui.os.ios?0.003:0.0009
+			});
+			mui('.mui-scroll').on('tap','.mui-control-item:not(.mui-active)',function(){
+				mui('.mui-slider').slider().gotoItem(this.getAttribute('data-index'));
+			});
+		});
+		</script>
+	</body>
+
+</html>
