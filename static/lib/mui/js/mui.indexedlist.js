@@ -98,16 +98,16 @@
 					pointElement = null;
 				}
 			};
-			self.el.bar.addEventListener($.EVENT_MOVE, function(event) {
+			self.el.bar.addEventListener('touchmove', function(event) {
 				findStart(event);
 			}, false);
-			self.el.bar.addEventListener($.EVENT_START, function(event) {
+			self.el.bar.addEventListener('touchstart', function(event) {
 				findStart(event);
 			}, false);
-			document.body.addEventListener($.EVENT_END, function(event) {
+			document.body.addEventListener('touchend', function(event) {
 				findEnd(event);
 			}, false);
-			document.body.addEventListener($.EVENT_CANCEL, function(event) {
+			document.body.addEventListener('touchcancel', function(event) {
 				findEnd(event);
 			}, false);
 		},
@@ -119,7 +119,6 @@
 			var itemCount = 0;
 			var liArray = self.el.liArray;
 			var itemTotal = liArray.length;
-			console.log(self);
 			self.hiddenGroups = [];
 			var checkGroup = function(currentIndex, last) {
 				if (itemCount >= currentIndex - groupIndex - (last ? 0 : 1)) {
