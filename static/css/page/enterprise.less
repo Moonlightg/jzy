@@ -103,6 +103,7 @@
 }
 .enterprise-discount{
 	p{
+		line-height: 1.2;
 		font-size: @fs6;
 	}
 }
@@ -177,6 +178,14 @@
 		font-size: .6rem;
 	}
 }
+.enterprise-price-new{
+	margin-top: .4rem;
+	color: #888;
+	span{
+		font-size: @fs8;
+		color: @icon_08;
+	}
+}
 @media screen and (max-width: 320px) {
     .enterprise-price {
     	flex-direction: column;
@@ -205,6 +214,13 @@
     	margin-right: 5px;
 		.png-image(stars-icon);
 		background-size: 100% 100%;
+	}
+}
+.score-stars-ms{
+	span{
+		width: .6rem;
+		height: .6rem;
+		margin-right: 2px;
 	}
 }
 .score-fraction{

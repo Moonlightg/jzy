@@ -1,0 +1,67 @@
+/*
+ * tl-tab.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.30 Moonlight, Inc.
+ *
+*/
+
+.tl-tab-screen{
+    padding: 0 @margin;
+    justify-content: space-between;
+    background: #fff;
+    &.layers{
+    	.tl-tab-screen-item{
+    		padding: .5rem 0;
+    		line-height: 1;
+    		p{
+    			margin-bottom: .25rem;
+    			font-size: 18px;
+    		}
+    		&.active{
+    			p,
+    			span{
+    				color: @brand_primary;
+    			}	
+    		}
+    		span,
+    		p{
+    			color: #444;
+    		}
+    	}
+    }
+}
+.tl-tab-screen-item{
+    position: relative;
+    padding:0 20px;
+    line-height: 45px;
+    font-size: 16px;
+    text-align: center;
+    color: #b4b4b4;
+    &.active{
+        color: @brand_primary;
+    }
+}
+.sort{
+    position: relative;
+    &:before,
+    &:after{
+        position: absolute;
+        top: 0;
+        right: -15px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+    }
+    &:before{
+        top: 5px;
+        border-bottom: 5px solid #d2cfcf;
+    }
+    &:after{
+        top: 13px;
+        border-top: 5px solid #d2cfcf;
+    }
+}
+

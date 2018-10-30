@@ -32,10 +32,38 @@
     .tl-icon-map-pin{
         margin-right:.25rem;
     }
+    .return i{
+        font-size: 1.2rem;
+        margin-left: -4px;
+    }
 }
 .tl-header-title{
     font-size: 1rem;
 	color: #fff;
+}
+.tl-header-search{
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    bottom: 0;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    input[type=search]{
+        margin-bottom: 0;
+        border-radius: 20px;
+        background: rgba(242, 242, 242, 0.3);
+    }
+    .mui-search{
+        width: 100%;
+    }
+    .mui-search .mui-placeholder .mui-icon,
+    .mui-placeholder{
+        color: #cffffa;
+    }
+    .mui-active:before{
+        top:1.2rem;
+    }
 }
 .tl-header-right{
     position: absolute;

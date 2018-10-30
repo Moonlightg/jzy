@@ -2214,6 +2214,67 @@ h2 {
   background: #15c8b5;
 }
 /*
+ * tl-tab.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.30 Moonlight, Inc.
+ *
+*/
+.tl-tab-screen {
+  padding: 0 0.8rem;
+  justify-content: space-between;
+  background: #fff;
+}
+.tl-tab-screen.layers .tl-tab-screen-item {
+  padding: .5rem 0;
+  line-height: 1;
+}
+.tl-tab-screen.layers .tl-tab-screen-item p {
+  margin-bottom: .25rem;
+  font-size: 18px;
+}
+.tl-tab-screen.layers .tl-tab-screen-item.active p,
+.tl-tab-screen.layers .tl-tab-screen-item.active span {
+  color: #15c8b5;
+}
+.tl-tab-screen.layers .tl-tab-screen-item span,
+.tl-tab-screen.layers .tl-tab-screen-item p {
+  color: #444;
+}
+.tl-tab-screen-item {
+  position: relative;
+  padding: 0 20px;
+  line-height: 45px;
+  font-size: 16px;
+  text-align: center;
+  color: #b4b4b4;
+}
+.tl-tab-screen-item.active {
+  color: #15c8b5;
+}
+.sort {
+  position: relative;
+}
+.sort:before,
+.sort:after {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+.sort:before {
+  top: 5px;
+  border-bottom: 5px solid #d2cfcf;
+}
+.sort:after {
+  top: 13px;
+  border-top: 5px solid #d2cfcf;
+}
+/*
  * tl-popover.less
  * v1.2.0 MIT License
  * http://www.moonlight313.cn
@@ -2359,6 +2420,10 @@ h2 {
   display: block;
   width: 100%;
 }
+.user-name {
+  font-size: 0.875rem;
+  color: #444;
+}
 .user_s {
   width: 1.6rem;
   height: 1.6rem;
@@ -2368,12 +2433,12 @@ h2 {
   border-radius: 1.6rem;
 }
 .user_m {
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.07142857rem;
-  -webkit-border-radius: 3rem;
-  -moz-border-radius: 3rem;
-  border-radius: 3rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 0.85714286rem;
+  -webkit-border-radius: 2.4rem;
+  -moz-border-radius: 2.4rem;
+  border-radius: 2.4rem;
 }
 .user_l {
   width: 4.5rem;
@@ -2779,6 +2844,7 @@ h2 {
   margin-right: .2rem;
 }
 .enterprise-discount p {
+  line-height: 1.2;
   font-size: 0.65rem;
 }
 .enterprise-img {
@@ -2869,6 +2935,14 @@ h2 {
 .enterprise-price span {
   font-size: .6rem;
 }
+.enterprise-price-new {
+  margin-top: .4rem;
+  color: #888;
+}
+.enterprise-price-new span {
+  font-size: 0.875rem;
+  color: #fd7720;
+}
 @media screen and (max-width: 320px) {
   .enterprise-price {
     flex-direction: column;
@@ -2897,6 +2971,11 @@ h2 {
   margin-right: 5px;
   background-image: url('../images/stars-icon.png');
   background-size: 100% 100%;
+}
+.score-stars-ms span {
+  width: .6rem;
+  height: .6rem;
+  margin-right: 2px;
 }
 .score-fraction {
   margin-left: .25rem;
@@ -3355,6 +3434,64 @@ h2 {
   .coupon-item .tl-btn {
     margin: 0;
   }
+}
+/*
+ * evaluate.less
+ * v1.2.0 MIT License
+ * http://www.moonlight313.cn
+ * Copyright (c) 2018.10.30 Moonlight, Inc.
+ *
+*/
+.evaluate-list li {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  padding: 0.8rem;
+  position: relative;
+}
+.evaluate-list li:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background-color: #eee;
+  z-index: 10;
+}
+.evaluate-list li .user-name {
+  margin: .4rem 0;
+}
+.evaluate-list li .seal {
+  width: 3.2rem;
+}
+.evaluate-content {
+  padding: .25rem 0;
+}
+.evaluate-content p {
+  font-size: 0.75rem;
+  color: #444;
+}
+.evaluate-content p.employee-user {
+  margin-top: .4rem;
+  color: #999;
+  font-size: 0.65rem;
+}
+.evaluate-footer {
+  padding: 10px 0;
+  text-align: right;
+}
+.evaluate-footer .tl-btn {
+  width: 3.6rem;
+  margin-left: .5rem;
+}
+.evaluate-footer .tl-btn i {
+  margin-right: .4rem;
 }
 /*
  * custiom-mui.less

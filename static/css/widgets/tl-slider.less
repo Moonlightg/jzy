@@ -145,7 +145,8 @@
 		padding: 0 @margin;
 	}
 	.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
-		padding: 0 12px;
+		margin: 0 12px;
+    	padding: 0;
 	}
 	.mui-segmented-control~.mui-slider-group{
 		top: @header_height;
@@ -180,7 +181,7 @@
 		    right: 0;
 		    bottom: 0;
 		    left: 0;
-		    height: 5px;
+		    height: 4px;
 		    width: 100%;
 		    content: '';
 		    -webkit-transform: scaleY(.5);
@@ -191,5 +192,39 @@
 	}
 	.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
 		color: @brand_primary;
+	}
+	// 有icon的切换
+	&.slider-icon{
+		.mui-segmented-control.mui-scroll-wrapper,
+		.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+			height: 3.4rem;
+		}
+		.mui-segmented-control~.mui-slider-group{
+			top: 3.4rem;
+		}
+		.mui-segmented-control .mui-control-item,
+		.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+			line-height: 3.4rem;
+		}
+		.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+			display: flex;
+			justify-content: space-between;
+		}
+		.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+			display: flex;
+		    flex-direction: column;
+		    line-height: 1;
+		    justify-content: center;
+		    align-items: center;
+		    margin: 0;
+		    color: #bbb;
+		    i{
+		    	margin-bottom: .4rem;
+    			font-size: 1rem;
+		    }
+		}
+		.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+		    color: #15c8b5;
+		}
 	}
 }
