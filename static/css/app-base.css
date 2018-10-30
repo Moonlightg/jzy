@@ -2940,7 +2940,7 @@ h2 {
   color: #888;
 }
 .enterprise-price-new span {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #fd7720;
 }
 @media screen and (max-width: 320px) {
@@ -3450,6 +3450,7 @@ h2 {
   display: flex;
   padding: 0.8rem;
   position: relative;
+  background: #fff;
 }
 .evaluate-list li:before {
   position: absolute;
