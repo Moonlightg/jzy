@@ -235,3 +235,44 @@
         line-height: 1.8;
     }
 }
+
+// 选择按钮
+.choice-box{
+    .tl-btn{
+        position: relative;
+        margin-top: @margin;
+        text-align: left;
+        overflow: hidden;
+        &.active{
+            color: @brand_primary;
+            background-color: #fff;
+            border-color: @brand_primary;
+            &:enabled:active{
+                border: 1px solid @brand_primary;
+                background-color: @brand_primary;
+            }
+            .choice-icon{
+                display: block;
+            }
+        }
+    }
+
+}
+.choice-icon{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-width: 0 22px 22px 0;
+    border-style: solid;
+    border-color: transparent #15c8b5 transparent transparent;
+    i{
+        position: absolute;
+        top: 1px;
+        right: -21px;
+        font-size: .6rem;
+        color: #fff;
+    }
+}

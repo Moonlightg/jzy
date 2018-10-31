@@ -8,12 +8,12 @@
 
 
 .tl-popover{
-	width: 90%;
+	width: 86%;
 	height: 13.5rem;
     top: 50%;
     left: 50%;
     margin-top: -6.75rem;
-    margin-left: -45%;
+    margin-left: -43%;
     padding: @margin;
     background: #fff;
     /*移除底部或顶部三角,需要在删除此代码*/
@@ -29,10 +29,10 @@
 		border:1px solid #dfdfdf;
 	}
 	&.coupon{
-		width: 280px;
-		height: 364px;
-		margin-top: -182px;
-    	margin-left: -140px;
+		width: 240px;
+		height: 312px;
+		margin-top: -150px;
+    	margin-left: -120px;
     	padding: 0;
     	background: transparent;
     	img{
@@ -50,4 +50,31 @@
 .tl-popover-title{
 	padding: .5rem 0;
 	text-align: center;
+}
+.tl-popover-tr{
+	width: 140px;
+	height: 94px;
+}
+.tl-popover-tr {
+	.mui-table-view-cell {
+		font-size: @fs7;
+		a{
+			display: flex;
+			align-items: center;
+		}
+		i{
+			font-size: 1rem;
+			margin-right: .5rem;
+		}
+	}
+}
+.tl-popover-footer{
+	margin-top: .4rem;
+	&.mui-row{
+		margin-left: -.4rem;
+		margin-right: -.4rem;
+		.mui-col-sm-6{
+			padding: .4rem;
+		}
+	}
 }

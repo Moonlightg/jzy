@@ -1825,6 +1825,42 @@ h2 {
   margin: 1%;
   line-height: 1.8;
 }
+.choice-box .tl-btn {
+  position: relative;
+  margin-top: 0.8rem;
+  text-align: left;
+  overflow: hidden;
+}
+.choice-box .tl-btn.active {
+  color: #15c8b5;
+  background-color: #fff;
+  border-color: #15c8b5;
+}
+.choice-box .tl-btn.active:enabled:active {
+  border: 1px solid #15c8b5;
+  background-color: #15c8b5;
+}
+.choice-box .tl-btn.active .choice-icon {
+  display: block;
+}
+.choice-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 22px 22px 0;
+  border-style: solid;
+  border-color: transparent #15c8b5 transparent transparent;
+}
+.choice-icon i {
+  position: absolute;
+  top: 1px;
+  right: -21px;
+  font-size: .6rem;
+  color: #fff;
+}
 /*
  * tl-input.less
  * v1.2.0 MIT License
@@ -2117,7 +2153,7 @@ h2 {
 .tl-slider-new .mui-slider-indicator .mui-scroll:after {
   position: absolute;
   right: 0;
-  bottom: 1px;
+  bottom: 0;
   left: 0;
   height: 1px;
   width: 100%;
@@ -2296,12 +2332,12 @@ h2 {
  *
 */
 .tl-popover {
-  width: 90%;
+  width: 86%;
   height: 13.5rem;
   top: 50%;
   left: 50%;
   margin-top: -6.75rem;
-  margin-left: -45%;
+  margin-left: -43%;
   padding: 0.8rem;
   background: #fff;
   /*移除底部或顶部三角,需要在删除此代码*/
@@ -2318,10 +2354,10 @@ h2 {
   border: 1px solid #dfdfdf;
 }
 .tl-popover.coupon {
-  width: 280px;
-  height: 364px;
-  margin-top: -182px;
-  margin-left: -140px;
+  width: 240px;
+  height: 312px;
+  margin-top: -150px;
+  margin-left: -120px;
   padding: 0;
   background: transparent;
 }
@@ -2338,6 +2374,31 @@ h2 {
 .tl-popover-title {
   padding: .5rem 0;
   text-align: center;
+}
+.tl-popover-tr {
+  width: 140px;
+  height: 94px;
+}
+.tl-popover-tr .mui-table-view-cell {
+  font-size: 0.75rem;
+}
+.tl-popover-tr .mui-table-view-cell a {
+  display: flex;
+  align-items: center;
+}
+.tl-popover-tr .mui-table-view-cell i {
+  font-size: 1rem;
+  margin-right: .5rem;
+}
+.tl-popover-footer {
+  margin-top: .4rem;
+}
+.tl-popover-footer.mui-row {
+  margin-left: -0.4rem;
+  margin-right: -0.4rem;
+}
+.tl-popover-footer.mui-row .mui-col-sm-6 {
+  padding: .4rem;
 }
 /*
  * tl-color.less
@@ -2574,6 +2635,7 @@ h2 {
   background: rgba(255, 255, 255, 0.6);
   margin: 0;
   padding-left: 2rem;
+  font-size: 0.75rem;
 }
 /*
  * login.less
